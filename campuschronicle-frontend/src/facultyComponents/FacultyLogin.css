@@ -1,0 +1,56 @@
+.faculty-login {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .faculty-login h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .faculty-login input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .faculty-login input:focus {
+    border-color: #3f51b5;
+    box-shadow: 0 0 5px rgba(63, 81, 181, 0.3);
+    outline: none;
+  }
+  
+  .faculty-login button {
+    background: linear-gradient(to right, #3f51b5, #5a68d8);
+    color: white;
+    padding: 12px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+  
+  .faculty-login button:hover {
+    background: linear-gradient(to right, #5a68d8, #3f51b5);
+  }
+  
+  .error-msg {
+    color: #e53935;
+    margin-top: 12px;
+    font-weight: 500;
+  }
+  

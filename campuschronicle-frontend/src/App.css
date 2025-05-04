@@ -1,0 +1,46 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  color: #333;
+}
+
+.app-container {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #eee;
+}
+
+.role-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.role-buttons button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #0052cc;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.role-buttons button:hover {
+  background-color: #003d99;
+  transform: scale(1.05);
+}

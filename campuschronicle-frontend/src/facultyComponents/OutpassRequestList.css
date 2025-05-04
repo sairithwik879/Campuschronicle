@@ -1,0 +1,92 @@
+/* OutpassRequestList.css */
+
+.outpass-container {
+  padding: 30px;
+  background-color: #1f2937; /* Tailwind's gray-800 */
+  color: #f3f4f6; /* Tailwind's gray-100 */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.outpass-container h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  border-bottom: 2px solid #4b5563; /* Tailwind's gray-600 */
+  padding-bottom: 8px;
+}
+
+.request-card {
+  background-color: #4b5563; /* Tailwind's gray-600 */
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  transition: background-color 0.3s ease;
+}
+
+.request-card:hover {
+  background-color: #374151; /* Darker hover */
+}
+
+.request-card strong {
+  color: #ffffff;
+}
+
+.request-card button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #10b981; /* Tailwind's green-500 */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.request-card button:hover {
+  background-color: #059669; /* Tailwind's green-600 */
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #fbc226; /* Tailwind's blue-500 */
+  color: rgb(35, 106, 157);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  align-self: auto;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #c2dc1b; /* Tailwind's blue-600 */
+}
+
+.outpass-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.outpass-header h1 {
+  font-size: 2rem;
+  color: #212720;
+  margin-bottom: 10px;
+}
+
+.outpass-subtext {
+  color: #c737da; /* Tailwind gray-300 */
+  font-size: 1rem;
+}
+
+.request-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+

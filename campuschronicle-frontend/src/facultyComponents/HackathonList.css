@@ -1,0 +1,199 @@
+/* General Container for Hackathon List */
+.hackathon-list {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  font-family: 'Roboto', sans-serif;
+  color: #2c3e50; /* Professional text color */
+  overflow: hidden;
+}
+
+/* Title styling */
+.hackathon-list h2 {
+  font-size: 2.5rem;
+  color: #2980b9; /* Professional blue color */
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Error message when no hackathons are found */
+.hackathon-list .error {
+  color: #e74c3c;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Hackathon list container with grid layout */
+.hackathon-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ensures responsive boxes */
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual hackathon card styling with animation */
+.hackathon-list li {
+  background-color: #ecf0f1; /* Light gray-blue background */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.7s ease-in-out forwards;
+}
+
+.hackathon-list li:nth-child(odd) {
+  animation-delay: 0.3s;
+}
+
+.hackathon-list li:nth-child(even) {
+  animation-delay: 0.5s;
+}
+
+.hackathon-list li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Name and title of the hackathon */
+.hackathon-list li strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #16a085; /* Teal color for name */
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Hackathon details with updated colors */
+.hackathon-list li p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #7f8c8d; /* Soft gray for text */
+}
+
+/* Application link style */
+.hackathon-list li a {
+  display: block;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #3498db; /* Light blue color for links */
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.hackathon-list li a:hover {
+  text-decoration: underline;
+  color: #1abc9c; /* Teal color on hover */
+}
+
+/* Styling for the "No Hackathons Found" message */
+.hackathon-list p {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #95a5a6; /* Light gray color */
+}
+
+/* Styling for the "Add Hackathon" button */
+.add-hackathon-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: #2980b9; /* Professional blue */
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-hackathon-btn:hover {
+  background-color: #21618c; /* Darker blue for hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframe for fading in elements */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Keyframe for fading in hackathon cards with upward motion */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .hackathon-list {
+    padding: 20px;
+  }
+
+  .hackathon-list h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .hackathon-list ul {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Smaller grid items */
+    gap: 15px;
+  }
+
+  .hackathon-list li {
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .add-hackathon-btn {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hackathon-list {
+    padding: 15px;
+  }
+
+  .hackathon-list h2 {
+    font-size: 1.5rem;
+  }
+
+  .hackathon-list ul {
+    grid-template-columns: 1fr; /* Single column on small devices */
+  }
+
+  .hackathon-list li {
+    padding: 15px;
+  }
+
+  .add-hackathon-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

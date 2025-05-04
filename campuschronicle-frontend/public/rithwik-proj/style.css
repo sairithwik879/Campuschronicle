@@ -1,0 +1,217 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --gray-color: #95a5a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.notification-badge {
+    background-color: var(--danger-color);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.notification-badge.hidden {
+    display: none;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.application-form, .status-section, .pending-requests, .approval-history {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.status-message {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--gray-color);
+}
+
+.status-message.approved {
+    background-color: rgba(46, 204, 113, 0.1);
+    border-left-color: var(--success-color);
+}
+
+.status-message.pending {
+    background-color: rgba(241, 196, 15, 0.1);
+    border-left-color: var(--warning-color);
+}
+
+.status-message.rejected {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left-color: var(--danger-color);
+}
+
+.history-list, .request-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.pass-item, .request-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--gray-color);
+}
+
+.pass-item.approved, .request-item.approved {
+    border-left-color: var(--success-color);
+}
+
+.pass-item.pending, .request-item.pending {
+    border-left-color: var(--warning-color);
+}
+
+.pass-item.rejected, .request-item.rejected {
+    border-left-color: var(--danger-color);
+}
+
+.pass-item h4, .request-item h4 {
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.pass-item p, .request-item p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.pass-item .date, .request-item .date {
+    color: var(--gray-color);
+    font-size: 12px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-approve {
+    background-color: var(--success-color);
+}
+
+.btn-reject {
+    background-color: var(--danger-color);
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filters select {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+}

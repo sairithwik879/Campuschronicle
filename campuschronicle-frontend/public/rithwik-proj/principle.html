@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal Dashboard - Pass Approvals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Principal Pass Approval Dashboard</h1>
+            <div id="notification-badge" class="notification-badge hidden">0</div>
+        </header>
+        
+        <div class="dashboard">
+            <div class="pending-requests">
+                <h2>Pending Pass Requests</h2>
+                <div id="pendingRequests" class="request-list">
+                    <!-- Pending requests will be loaded here -->
+                </div>
+              
+            </div>
+            
+            <div class="approval-history">
+                <h2>Approval History</h2>
+                <div class="filters">
+                    <select id="filterStudent">
+                        <option value="">All Students</option>
+                    </select>
+                    <select id="filterStatus">
+                        <option value="">All Statuses</option>
+                        <option value="approved">Approved</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                    <button id="applyFilter" class="btn">Apply Filter</button>
+                </div>
+                <div id="approvalHistory" class="history-list">
+                    <!-- Approval history will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="principal.js"></script>
+</body>
+</html>
