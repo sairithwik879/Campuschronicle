@@ -2,7 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const User = require('../models/User');
+const User = require('../models/User.js');
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
@@ -17,7 +17,7 @@ router.post('/login', async (req, res) => {
   if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
   const token = jwt.sign({ id: user._id, role: user.role }, JWT_SECRET, { expiresIn: '1d' });
-  res.json({ token, role: user.role, userId: user.userId });
+  return res.json({ token, role: user.role, userId: user.userId });
 });
 
 // Create faculty (only for principal)
@@ -45,7 +45,7 @@ router.post('/create-faculty', async (req, res) => {
 router.get('/faculty-list', async (req, res) => {  // Changed from '/faculty' to '/faculty-list'
   try {
     const faculty = await User.find({ role: 'faculty' });
-    res.json(faculty);
+   return res.json(faculty);
   } catch (error) {
     console.error('Error fetching faculty list:', error);
     res.status(500).json({ message: 'Failed to fetch faculty list' });

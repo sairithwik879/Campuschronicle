@@ -14,7 +14,7 @@ function FacultyLogin() {
     setError('');
 
     try {
-      const response = await axios.post('https://campuschronicle-backend.onrender.com/api/login', { userId, password });
+      const response = await axios.post('https://campuschronicle-backend.onrender.com/api/login', { userId, password },);
 
       if (response.data.role === 'faculty') {
         localStorage.setItem('token', response.data.token);
