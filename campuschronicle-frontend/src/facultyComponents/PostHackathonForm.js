@@ -22,7 +22,7 @@ function PostHackathonForm() {
 
     try {
       // Send the POST request to the server with the form data
-      await axios.post('http://localhost:5000/api/post-hackathon', formData);
+      await axios.post('https://campuschronicle-backend.onrender.com/api/post-hackathon', formData);
       setMessage('Hackathon posted successfully.');
 
       // Reset form fields after successful submission

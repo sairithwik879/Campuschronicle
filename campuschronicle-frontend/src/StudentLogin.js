@@ -12,7 +12,7 @@ function StudentLogin() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/student-login', {
+      const response = await axios.post('https://campuschronicle-backend.onrender.com/api/student-login', {
         studentId,
         studentMobile,
       });

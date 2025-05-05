@@ -18,7 +18,7 @@ function SearchStudent() {
 
     try {
       // Send a GET request to the backend to search for the student
-      const response = await axios.get(`http://localhost:5000/api/search-student/${studentId}`);
+      const response = await axios.get(`https://campuschronicle-backend.onrender.com/api/search-student/${studentId}`);
       setStudent(response.data);
     } catch (error) {
       setErrorMessage('Student not found or server error');

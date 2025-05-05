@@ -11,7 +11,7 @@ function OutpassRequestList() {
   useEffect(() => {
     const fetchOutpassRequests = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/students');
+        const response = await axios.get('https://campuschronicle-backend.onrender.com/api/students');
         setRequests(response.data);
         setError('');
       } catch (err) {

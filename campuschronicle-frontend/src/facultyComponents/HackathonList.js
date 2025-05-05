@@ -9,7 +9,7 @@ const HackathonList = () => {
   const navigate = useNavigate();
   useEffect(() => {
     // Fetch the list of hackathons from the server
-    axios.get('http://localhost:5000/api/hacklist')
+    axios.get('https://campuschronicle-backend.onrender.com/api/hacklist')
       .then((response) => {
         setHackathons(response.data); // Update state with fetched hackathons
       })

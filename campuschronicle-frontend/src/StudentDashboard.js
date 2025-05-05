@@ -12,7 +12,7 @@ const StudentDashboard = () => {
 
   const handleShowHackathons = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/hacklist');
+      const response = await axios.get('https://campuschronicle-backend.onrender.com/api/hacklist');
       setHackathons(response.data);
       setHackathonError('');
     } catch (error) {
